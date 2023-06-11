@@ -16,10 +16,10 @@
   <table >
     <tr>
       <td>
-        <a href="signup_worker.php" ><h2><text style="color:#666666">Job Seeker</text></h2></a>
+        <a href="signup_jobseeker.php" ><h2><text style="color:#666666">Job Seeker</text></h2></a>
       </td>
       <td>
-        <a href="login_worker.php"><text style="color:#666666"><b>Log In As Job Seeker Here </b><p>Lorem Ipsum printer took a galley. It has survived not only, but also the leap into electronic typesetting, remaining essentially unchanged. </p></text></a>
+        <a href="login_jobseeker.php"><text style="color:#666666"><b>Log In As Job Seeker Here </b><p>Lorem Ipsum printer took a galley. It has survived not only, but also the leap into electronic typesetting, remaining essentially unchanged. </p></text></a>
       </td>
     </tr>
     <tr>
