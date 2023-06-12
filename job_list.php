@@ -105,6 +105,7 @@ body{
     <div class="table_course">
     <table>
         <tr>
+            <th>Title</th>
             <th>Company Name</th>
             <th>Type</th>
             <th>Post</th>
@@ -127,7 +128,7 @@ body{
         }
 
         // SQL query to retrieve data from table
-        $sql = "SELECT id, company, type, post, salary, workhour FROM job";
+        $sql = "SELECT id, title, company, type, post, salary, workhour FROM job";
 
         // Execute SQL query
         $result = mysqli_query($conn, $sql);
@@ -138,6 +139,7 @@ body{
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>";
                 // echo "<td>" . $row["id"] . "</td>";
+                echo "<td>" . $row["title"] . "</td>";
                 echo "<td>" . $row["company"] . "</td>";
                 echo "<td>" . $row["type"] . "</td>";
                 echo "<td>" . $row["post"] . "</td>";

@@ -21,9 +21,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 
-echo "$job_id";
-echo "$js_id";
-echo "$job_type";
+// echo "$job_id";
+// echo "$js_id";
+// echo "$job_type";
 
 
 
