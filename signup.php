@@ -24,7 +24,7 @@
     </tr>
     <tr>
       <td>
-        <a href="signup_conpany.php" ><h2><text style="color:#666666">Company</h2></text></a>
+        <a href="signup_company.php" ><h2><text style="color:#666666">Company</h2></text></a>
       </td>
       <td>
         <a href="login_company.php"><text style="color:#666666"><b>Log In As Company Here </b><p>Lorem Ipsum printer took a galley. It has survived not only, but also the leap into electronic typesetting, remaining essentially unchanged. </p> </text></a>  
