@@ -26,7 +26,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
 <nav id="navbar">
     <div class="container">
         <ul>
-            <a class="w_login" href="jobs.php">Jobs</a>
+            <a class="w_login" href="job_list.php">Jobs</a>
             <a class="w_login" href="data_jobseeker.php">Portfolio</a>
             <a class="w_login" href="update_jobseeker.php">Update Profile</a>
             <a class="e_login" href="courses_list.php">Courses</a>
