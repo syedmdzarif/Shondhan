@@ -1,0 +1,30 @@
+
+.pay{
+    margin-top: 180px;
+    margin-left: 380px;
+    width: 50%;
+    border: 1px solid grey;
+    padding: 10px;
+  }
+  
+  img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+  }
+  
+  th, td {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+  }
+
+  /* .button{
+    width: 40px;
+    height: 20px;
+    background-color: grey;
+    color: white;
+  } */
+  

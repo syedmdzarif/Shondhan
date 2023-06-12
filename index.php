@@ -25,8 +25,8 @@
     <nav id="navbar">
         <div class="container">
             <ul>
-                <a class="w_login" href="jobs.php">Jobs</a>
-                <a class="e_login" href="courses.php">Courses</a>
+                <a class="w_login" href="job_list.php">Jobs</a>
+                <a class="e_login" href="course_list.php">Courses</a>
                 <a class="w_signup" href="login_admin.php">Admin</a>
                 <a class="e_signup" href="signup.php">Signup</a>
             </ul>
