@@ -11,13 +11,16 @@
 <div class="table_course">
     <table>
         <tr>
-            <th>Title</th>
-            <th>Company Name</th>
-            <th>Type</th>
-            <th>Post</th>
-            <th>Salary</th>
-            <th>Work Hour</th>
-            <th>Apply</th>
+            <th>Job Title</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>SSC</th>
+            <th>HSC</th>
+            <th>CGPA</th>
+            <th>Action</th>
         </tr>
         <?php
         $servername = "localhost";
@@ -33,8 +36,15 @@
             die("Connection failed: " . mysqli_connect_error());
         }
 
+        session_start();
+
+        if(isset($_SESSION['id'])){
+            $company_id = $_SESSION['id'];
+        }
+
+
         // SQL query to retrieve data from table
-        $sql = "SELECT id, title, company, type, post, salary, workhour FROM job";
+        $sql = "SELECT job.title, js_info.first_name, js_info.last_name, js_info.phone, js_info.address, js_info.gender, js_info.ssc, js_info.hsc, js_info.cgpa from js_info JOIN (job JOIN application ON job.id = application.job_id) on js_info.id = application.js_id WHERE job.company_id = '$company_id'";
 
         // Execute SQL query
         $result = mysqli_query($conn, $sql);
@@ -46,11 +56,14 @@
                 echo "<tr>";
                 // echo "<td>" . $row["id"] . "</td>";
                 echo "<td>" . $row["title"] . "</td>";
-                echo "<td>" . $row["company"] . "</td>";
-                echo "<td>" . $row["type"] . "</td>";
-                echo "<td>" . $row["post"] . "</td>";
-                echo "<td>" . $row["salary"] . "</td>";
-                echo "<td>" . $row["workhour"] . "</td>";
+                echo "<td>" . $row["first_name"] . "</td>";
+                echo "<td>" . $row["last_name"] . "</td>";
+                echo "<td>" . $row["phone"] . "</td>";
+                echo "<td>" . $row["address"] . "</td>";
+                echo "<td>" . $row["gender"] . "</td>";
+                echo "<td>" . $row["ssc"] . "</td>";
+                echo "<td>" . $row["hsc"] . "</td>";
+                echo "<td>" . $row["cgpa"] . "</td>";
                 // echo "<td><a href='quiz_confirm.php'>Apply</a></td>";
                 echo "<td>";
 
@@ -61,7 +74,7 @@
 
               
 
-                <a href="quiz_confirm.php?id=<?php echo $row['id']?>" type="submit">Apply</a>
+                <a href="#" type="submit">Contact</a>
 
 
                 </html>
