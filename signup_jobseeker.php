@@ -76,7 +76,7 @@ if(isset($_POST['submit'])){
       <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png">
       <br>
       <input type="submit" name="submit" value="Sign Up">
-      <a href="login_worker.php">&nbspAlready have an account? Login In Here</a>
+      <a href="login_jobseeker.php">&nbspAlready have an account? Login In Here</a>
    </form>
 </div>
 

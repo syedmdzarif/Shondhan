@@ -39,43 +39,12 @@ while ($row = mysqli_fetch_assoc($result)) {
 </head>
 <body>
 
-    <?php
 
-    if($job_type == "Data Scientist")
-    {
-
-    ?>
+    <p> Do you want to proceed to quiz? </p>
 
 
-    Do you want to proceed to quiz? 
+    <a href="quiz.php?id=<?php echo $job_id?>" type="submit">Continue</a>
 
-    <a href="quiz_data_scientist.php?id=<?php echo $job_id?>" type="submit">Continue</a>
-
-    <?php
-
-    }
-
-    elseif($job_type == "Human Resource")
-    {
-
-    ?>
-
-    Do you want to proceed to quiz? 
-
-    <a href="quiz_human_resource.php?id=<?php echo $job_id?>" type="submit">Continue</a>
-
-    <?php
-
-    }
-
-    ?>  
-
-
-    
-
-
-
-
-    
+ 
 </body>
 </html>

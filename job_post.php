@@ -61,12 +61,13 @@ $workhour = mysqli_real_escape_string($conn, $_POST['workhour']);
           <option value="Data Scientist">Data Scientist</option>
           <option value="Senior Software Developer">Senior Software Developer</option>
           <option value="Junior Software Developer">Junior Software Developer</option>
+          <option value="Govt. Developer">Govt. Developer</option>
           <option value="Front Desk Attendee">Front Desk Attendee</option>
           <option value="Quality Assurance Engineer">Quality Assurance Engineer</option>
           <option value="Human Resource">Human Resource</option>
           <option value="Business Analyst">Business Analyst</option>
-          <option value="Junior Architect">Junior Architect</option>
-          <option value="Senior Architect">Senior Architect</option>
+          <option value="Medical Practitioner">Medical Practitioner</option>
+          <option value="Faculty Member">Faculty Member</option>
       </select>
       <input type="text" name="post" placeholder=" your company available post" class="box" required>
       <input type="text" name="salary" placeholder="Salary For this job" class="box" required>
