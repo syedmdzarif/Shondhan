@@ -64,7 +64,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
     {
       echo $_SESSION['name'];
       
-
+      $js_id = $_SESSION['id'];
       echo " #"."".$_SESSION['id'];
       echo "<br><br>"."Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
 
@@ -79,109 +79,159 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
        </div>
 
        <div class="profile_picture"> 
-       <img src="images/pfp.jpg" width:"300px" height:"300px">
+       <img src="images/pfp_avatar.jpg" width:"300px" height:"300px">
 
 </div>
 
 
 
-
-
-<div class="container">
-<div class="row">
-
-  <div class="a">
-
-
-
-
-
-  <div class="col-sm-4">
-    <div class="panel panel-danger">
-      <div class="panel-heading"><a href="company_list.php" class="link2">Companies Count</a></div>
-      <div class="panel-body">
-
-        <h3 class="text-center"><b>
-
-              <?php
-              $connection = mysqli_connect("localhost","root","","shondhan");
-
-              $query = "SELECT id FROM company ORDER BY id";
-              $query_run = mysqli_query($connection,$query);
-              $row = mysqli_num_rows($query_run);
-
-              echo "$row";
-               ?>
-
-            </b></h3>
-
-
-
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-sm-4">
-    <div class="panel panel-success">
-      <div class="panel-heading">  <a href="job_list.php" class="link2">Jobs Count</a></div>
-      <div class="panel-body">
-
-
-                  <h3 class="text-center"><b>
-
-                    <?php
-                    $connection = mysqli_connect("localhost","root","","shondhan");
-
-                    $query = "SELECT company FROM job ORDER BY company";
-                    $query_run = mysqli_query($connection,$query);
-                    $row = mysqli_num_rows($query_run);
-
-                    echo "$row";
-                     ?>
-
-                  </b></h3>
-
-
-
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-4">
-    <div class="panel panel-primary">
-    <div class="panel-heading"><a href="course_list.php" class="link">Courses Count</a></div>
-      <div class="panel-body">
-
-        <h3 class="text-center"><b>
-
-                 <?php
-                 $connection = mysqli_connect("localhost","root","","shondhan");
-
-                 $query = "SELECT name FROM course ORDER BY name";
-                 $query_run = mysqli_query($connection,$query);
-                 $row = mysqli_num_rows($query_run);
-
-                 echo "$row";
-                  ?>
-
-               </b></h3>
-
-
-
-      </div>
-    </div>
   </div>
 
 
 
 
 
+            <?php
 
-    </div>
-</div>
-</div>
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "shondhan";
 
+            // Create connection
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            $sql_info = "SELECT filename, js_info.first_name, js_info.last_name, js_info.phone, js_info.address, js_info.gender, js_info.ssc, js_info.ssc_passing_year, js_info.ssc_institute, js_info.hsc, js_info.hsc_passing_year, js_info.hsc_institute, js_info.cgpa, js_info.uni_passing_year, js_info.uni_institute from js_info JOIN cv ON cv.js_id = js_info.id WHERE js_info.id = '$js_id'";
+
+            // Execute SQL query
+            $result = mysqli_query($conn, $sql_info);
+
+
+
+   
+            if (mysqli_num_rows($result) > 0) {
+            // Output data of each row
+            $row = mysqli_fetch_assoc($result);
+               
+         
+                ?>
+<div class="container_2">
+
+<div class="left">
+           
+                  <h3><b>Personal Information</b></h3>
+                  <br>
+                  <label><b>First Name: </b></label>
+                  <?php echo $row["first_name"];  ?>
+                  <br>
+                 
+                  <label><b>Last Name: </b></label>
+                  <?php echo $row["last_name"];  ?>
+                  <br>
+                  <label><b>Phone Number: </b></label>
+                  <?php echo $row["phone"]; ?>
+                  <br>
+                  <label><b>Address: </b></label>
+                  <?php echo  $row["address"];  ?>
+                  <br>
+                  <label><b>Gender: </b></label>
+                  <?php echo $row["gender"];  ?>
+                  <br>
+                  <br>
+
+                  <h3><b>Uploaded CV</b></h3>
+           
+
+                  <a href="uploads/<?php echo $row['filename']; ?>" target="_blank">View</a>
+                  <a href="uploads/<?php echo $row['filename']; ?>" download>Download</a>
+
+                  </div>
+
+
+                  
+
+                  <div class="right">
+
+                  <h3><b>Educational Qualifications</b></h3>
+
+                  <br>
+
+                  <h4><b>Secondary School Certificate</b></h4>
+                  
+                  <label><b>Institution: </b></label>
+                  <?php  echo $row["ssc_institute"];  ?>
+                  <br>
+                  <label><b>Passing Year: </b></label>
+                  <?php echo $row["ssc_passing_year"]; ?>
+                  <br>
+                  <label><b>Result: </b></label>
+                  <?php echo $row["ssc"] ;  ?>
+                  <br>
+                  <br>
+                  
+                 
+                  
+            
+
+            
+
+                  <h4><b>Higher Secondary Certificate</b></h4>
+                  
+                  <label><b>Institution: </b></label>
+                  <?php  echo $row["hsc_institute"];  ?>
+                  <br>
+                  <label><b>Passing Year: </b></label>
+                  <?php echo $row["hsc_passing_year"]; ?>
+                  <br>
+                  <label><b>Result: </b></label>
+                  <?php echo $row["hsc"] ;  ?>
+                  <br>
+                  <br>
+
+
+          
+
+        
+
+                  <h4><b>University</b></h4>
+                  
+                  <label><b>Institution: </b></label>
+                  <?php  echo $row["uni_institute"];  ?>
+                  <br>
+                  <label><b>Passing Year: </b></label>
+                  <?php echo $row["uni_passing_year"]; ?>
+                  <br>
+                  <label><b>Result: </b></label>
+                  <?php echo $row["cgpa"] ;  ?>
+                  <br>
+                  <br>
+
+
+
+                  
+
+
+           
+
+                  </div>
+
+                <?php
+                
+                
+                
+
+              
+
+            
+
+          }
+                
+
+                ?>
+
+
+            </div>
+
+</html>
 
 
 

@@ -55,8 +55,8 @@ $workhour = mysqli_real_escape_string($conn, $_POST['workhour']);
          }
       }
       ?>
-      <input type="text" name="company" placeholder="enter Company Name" class="box" required>
-      <input type="text" name="title" placeholder="enter title" class="box" required>
+      <input type="text" name="company" placeholder="Enter Company Name" class="box" required>
+      <input type="text" name="title" placeholder="Enter title for the post" class="box" required>
       <select name="type">
           <option value="Data Scientist">Data Scientist</option>
           <option value="Senior Software Developer">Senior Software Developer</option>
@@ -69,12 +69,13 @@ $workhour = mysqli_real_escape_string($conn, $_POST['workhour']);
           <option value="Medical Practitioner">Medical Practitioner</option>
           <option value="Faculty Member">Faculty Member</option>
       </select>
-      <input type="text" name="post" placeholder=" your company available post" class="box" required>
+      <input type="text" name="post" placeholder=" Your company available post" class="box" required>
       <input type="text" name="salary" placeholder="Salary For this job" class="box" required>
       <input type="text" name="workhour" placeholder="Working Hour" class="box" required>
 
 
       <input type="submit" name="submit" value="Post This Job" class="btn">
+      <a href="profile_company.php">Go Back</a>
 
    </form>
 

@@ -5,26 +5,43 @@ body {
 	align-items: center;
 	height: 95vh;
 	flex-direction: column;
+	
+}
+
+*{
+	font-family: system-ui;
+	box-sizing: border-box;
+	color:grey;
 }
 
 .container{
 	display: flex;
-	margin: 50px;
-	padding:50px;
-	border: 2px;
+	padding: 40px;
+	margin-top: 40px;
+	width:57%;
+
+
+	border: 0.5px solid grey;
+	border-radius: 4px;
+}
+
+#cv{
+	height: 40px;
+	padding: 40px;
 }
 
 .left{
 	float: left;
-	background-color: red;
-	width:400px;
+	
+
+	/* width:200px; */
 }
 
 .right{
-	width:400px;
-	margin-left: 20px;
+	/* width:200px; */
+	margin-left: 100px;
 	float:right;
-background-color: blue;
+
 }
 
 *{
@@ -50,14 +67,26 @@ input, select {
 	display: block;
 	border: 2px solid #ccc;
 	width: 130%;
+	height: 40px;
 	padding: 8px;
-	margin: 5px auto;
-	border-radius: 1px;
+	margin: 4px auto;
+	border-radius: 4px;
+}
+
+.upload_btn{
+	float: right;
+	background: #676767;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 4px;
+	margin-left: 1000px;
+	border: none;
+
 }
 
 button {
 	float: right;
-	background: #3c4858;
+	background: #676767;
 	padding: 10px 15px;
 	color: #fff;
 	border-radius: 4px;
@@ -66,7 +95,7 @@ button {
 }
 button:hover{
 	opacity: .7;
-	background: #e06706;
+	background: #669999;
 	color: #fff;
 }
 

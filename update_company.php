@@ -74,11 +74,11 @@ if(isset($_POST['update_profile'])){
 
    <form action="" method="post" enctype="multipart/form-data">
       <?php
-         if($fetch['image'] == ''){
-            echo '<img src="images/default-avatar.png">';
-         }else{
-            echo '<img src="uploaded_img/'.$fetch['image'].'">';
-         }
+         // if($fetch['image'] == ''){
+         //    echo '<img src="images/default-avatar.png">';
+         // }else{
+         //    echo '<img src="uploaded_img/'.$fetch['image'].'">';
+         // }
          if(isset($message)){
             foreach($message as $message){
                echo '<div class="message">'.$message.'</div>';
@@ -91,22 +91,22 @@ if(isset($_POST['update_profile'])){
             <input type="text" name="update_name" value="<?php echo $fetch['name']; ?>" class="box">
             <span>Company email :</span>
             <input type="email" name="update_email" value="<?php echo $fetch['email']; ?>" class="box">
-            <span>update Company Logo:</span>
+            <span>Update Company Logo:</span>
             <input type="file" name="update_image" accept="image/jpg, image/jpeg, image/png" class="box">
          </div>
          <div class="inputBox">
             <input type="hidden" name="old_pass" value="<?php echo $fetch['password']; ?>">
-            <span>old password :</span>
-            <input type="password" name="update_pass" placeholder="enter previous password" class="box">
-            <span>new password :</span>
-            <input type="password" name="new_pass" placeholder="enter new password" class="box">
-            <span>confirm password :</span>
-            <input type="password" name="confirm_pass" placeholder="confirm new password" class="box">
+            <span>Old Password :</span>
+            <input type="password" name="update_pass" placeholder="Enter previous password" class="box">
+            <span>New Password :</span>
+            <input type="password" name="new_pass" placeholder="Enter new password" class="box">
+            <span>Confirm Password :</span>
+            <input type="password" name="confirm_pass" placeholder="Confirm new password" class="box">
          </div>
       </div>
-      <input type="submit" value="update profile" name="update_profile" class="btn">
+      <input type="submit" value="Update Profile" name="update_profile" class="btn">
 
-      <a href="profile_company.php" class="delete-btn">go back</a>
+      <a href="profile_company.php" class="delete-btn">Go Back</a>
    </form>
 
 </div>
