@@ -95,6 +95,7 @@ body{
     <div class="container">
         <ul>
             <a class="w_login" href="job_list.php">Jobs</a>
+            <a class="w_login" href="profile_jobseeker.php">Profile</a>
             <a class="w_login" href="data_jobseeker.php">Portfolio</a>
             <a class="w_login" href="update_jobseeker.php">Update Profile</a>
             <a class="e_login" href="courses_list.php">Courses</a>
@@ -111,9 +112,11 @@ body{
     <div class="table_course">
     <table>
         <tr>
-            <th>Course Name</th>
-            <th>Description</th>
             <th>Image</th>
+            <th>Course Name</th>
+            <th>Type</th>
+            <th>Description</th>
+            
             <th>Enroll</th>
         </tr>
         <?php
@@ -131,7 +134,7 @@ body{
         }
 
         // SQL query to retrieve data from table
-        $sql = "SELECT name, description, image FROM course";
+        $sql = "SELECT name, description, type, image FROM course";
 
         // Execute SQL query
         $result = mysqli_query($conn, $sql);
@@ -141,9 +144,11 @@ body{
             // Output data of each row
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>";
-                echo "<td>" . $row["name"] . "</td>";
-                echo "<td>" . $row["description"] . "</td>";
                 echo "<td><img src='images/" . $row["image"] . "' alt='" . $row["name"] . "' width='100'></td>";
+                echo "<td>" . $row["name"] . "</td>";
+                echo "<td>" . $row["type"] . "</td>";
+                echo "<td>" . $row["description"] . "</td>";
+                
                 echo "<td><a href='payment.php'>Enroll</a></td>";
                 echo "</tr>";
 

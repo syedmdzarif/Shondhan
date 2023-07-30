@@ -110,14 +110,71 @@ while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr><td colspan='4'>0 results</td></tr>";
         }
 
-        // Close connection
-        mysqli_close($conn);
+        
         ?>
     </table>
 
     </div>
 
+
+    <div class="table_courses">
+        <h3>Here are a few courses we think would help! </h3>
+
+        <table>
+        <tr>
+            <th>Image</th>
+            <th>Course Name</th>
+            <th>Type</th>
+            <th>Description</th>
+
+            <th>Enroll</th>
+        </tr>
+        <?php
+        
+        // Check connection
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+
+        // SQL query to retrieve data from table
+        $sql = "SELECT name, description, type, image FROM course WHERE type='$job_type'";
+
+        // Execute SQL query
+        $result = mysqli_query($conn, $sql);
+
+        // Check if any rows were returned
+        if (mysqli_num_rows($result) > 0) {
+            // Output data of each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr>";
+                echo "<td><img src='images/" . $row["image"] . "' alt='" . $row["name"] . "' width='100'></td>";
+                echo "<td>" . $row["name"] . "</td>";
+                echo "<td>" . $row["type"] . "</td>";
+                echo "<td>" . $row["description"] . "</td>";
+                
+                echo "<td><a href='payment.php'>Enroll</a></td>";
+                echo "</tr>";
+
+            }
+        } else {
+            echo "<tr><td colspan='4'>0 results</td></tr>";
+        }
+
+        // Close connection
+        mysqli_close($conn);
+        ?>
+    </table>
+
+
+    </div>
+
     <a href="profile_jobseeker.php" type="submit">Go to Profile</a>
+
+
+    <?php
+        // Close connection
+        mysqli_close($conn);
+    ?>
 
 
 </body>
