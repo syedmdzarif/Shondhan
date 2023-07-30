@@ -1662,7 +1662,7 @@ echo "$js_id";
 
   
 
-        // Medical Practitiooner
+        // Medical Practitioner
 
 
     
@@ -1897,7 +1897,7 @@ echo "$js_id";
         <label for="female"> Associate professor</label>
 
         <input style="cursor: pointer" type="radio" id="female" name="question_2" value="Correct Answer">
-        <label for="female"> Professo</label>
+        <label for="female"> Professor</label>
     </td>
 </tr>
 
@@ -1928,14 +1928,14 @@ echo "$js_id";
         <input style="cursor: pointer;" type="radio" id="male" name="question_4" value="Wrong Answer_1">
         <label for="male">Lecturer</label>
 
-        <input style="cursor: pointer" type="radio" id="female" name="question_4" value="correct Answer">
-        <label for="female"> Chairperson</label>
+        <input style="cursor: pointer" type="radio" id="female" name="question_4" value="Correct Answer">
+        <label for="female"> Chair Person</label>
 
         <input style="cursor: pointer" type="radio" id="female" name="question_4" value="Wrong Answer_2">
-        <label for="female"> Researcher</label>
+        <label for="female">Researcher</label>
 
         <input style="cursor: pointer" type="radio" id="female" name="question_4" value="Wrong Answer_3">
-        <label for="female">Professor emeritus</label>
+        <label for="female">Professor Emeritus</label>
     </td>
 </tr>
 
