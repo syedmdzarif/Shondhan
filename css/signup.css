@@ -3,16 +3,35 @@ body {
   background-color: white;
   background-size:cover;
   font-family: system-ui;
+  background-image: url('office_img.jpg');
  }
  
 .center{
 
-margin-top: 200px;
+margin-top: 280px;
 margin-left: 500px;
 
 width: 40%;
 border: 0px solid green;
 padding: 10px;
+}
+
+
+.main_content{
+  width: 400px;
+}
+
+.left{
+  float: left;
+  width: 48%;
+  border-right: 1px solid grey;
+}
+
+.right{
+  float: right;
+  width: 48%;
+ 
+  
 }
  
 img {

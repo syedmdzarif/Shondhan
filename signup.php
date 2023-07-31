@@ -13,24 +13,26 @@
 <body>
     
 <div class="center">
-  <table >
-    <tr>
-      <td>
-        <a href="signup_jobseeker.php" ><h2><text style="color:#666666">Job Seeker</text></h2></a>
-      </td>
-      <td>
-        <a href="login_jobseeker.php"><text style="color:#666666"><b>Log In As Job Seeker Here </b><p>Lorem Ipsum printer took a galley. It has survived not only, but also the leap into electronic typesetting, remaining essentially unchanged. </p></text></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="signup_company.php" ><h2><text style="color:#666666">Company</h2></text></a>
-      </td>
-      <td>
-        <a href="login_company.php"><text style="color:#666666"><b>Log In As Company Here </b><p>Lorem Ipsum printer took a galley. It has survived not only, but also the leap into electronic typesetting, remaining essentially unchanged. </p> </text></a>  
-      </td>
-    </tr>
-  </table>
+    <div class="left">
+  
+        <a href="signup_jobseeker.php" ><h2><text style="color:#666666">Sign Up As Job Seeker</text></h2></a>
+      
+     
+        <a href="login_jobseeker.php"><text style="color:#666666"><b>Log In As Job Seeker Here </b></text></a>
+
+         
+
+      </div>
+
+      <div class="right">
+   
+        <!-- <img src="office_img.jpg" width="3000px" height="300px"> -->
+        <a href="signup_company.php" ><h2><text style="color:#666666">Sign Up As  Company</h2></text></a>
+    
+        <a href="login_company.php"><text style="color:#666666"><b>Log In As Company Here </b></text></a> 
+        
+
+      </div>
 </div>
 
 
