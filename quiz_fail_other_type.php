@@ -32,11 +32,34 @@ while ($row = mysqli_fetch_assoc($result)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/quiz_fail.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Sorry! You are not qualified to apply for this job!</h1>
-    <h3>Here are a few job suggestions you should try applying for! </h3>
+
+<header id="main-header">
+    <div class="container">
+        <h1>Shondhan</h1>
+    </div>
+</header>
+
+
+<nav id="navbar">
+    <div class="container">
+        <ul>
+            <a class="w_login" href="job_list.php">Jobs</a>
+            <a class="w_login" href="data_jobseeker.php">Portfolio</a>
+            <a class="w_login" href="update_jobseeker.php">Update Profile</a>
+            <a class="e_login" href="courses_list.php">Courses</a>
+            <a class="e_login" href="profile_jobseeker.php">Profile</a>
+            
+            <a class="e_signup" href="logout.php">Logout</a>
+        </ul>
+    </div>
+</nav>
+    <div class="main">
+    <h3>Sorry! You are not qualified to apply for this job! Here are a few job suggestions you should try applying for! </h3>
+
 
 
 
@@ -167,7 +190,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     </div>
 
-    <a href="profile_jobseeker.php" type="submit">Go to Profile</a>
+    <!-- <a href="profile_jobseeker.php" type="submit">Go to Profile</a> -->
+
+    </div>
 
     <?php
     // Close connection
