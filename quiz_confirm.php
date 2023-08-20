@@ -35,15 +35,19 @@ while ($row = mysqli_fetch_assoc($result)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/quiz_confirm.css
+    ">
     <title>Shondhan</title>
 </head>
 <body>
 
+    <div class=box>
+        <p class="txt"> Do you want to proceed to quiz? </p>
 
-    <p> Do you want to proceed to quiz? </p>
 
+        <button class="btn"><a href="quiz.php?id=<?php echo $job_id?>" type="submit">Continue</a></button>
 
-    <a href="quiz.php?id=<?php echo $job_id?>" type="submit">Continue</a>
+    </div>
 
  
 </body>

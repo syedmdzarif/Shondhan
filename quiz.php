@@ -1,4 +1,4 @@
-5<?php
+<?php
 
 error_reporting(0);
 
@@ -21,9 +21,9 @@ while ($row = mysqli_fetch_assoc($result)) {
     $job_type = $row['type'];
 }
 
-echo "$job_type";
+// echo "$job_type";
 
-echo "$js_id";
+// echo "$js_id";
 
 ?>
 
@@ -33,13 +33,14 @@ echo "$js_id";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/quiz.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>data</h1>
 
 
 <form action="" method="post">
+    <div class="main">
     <table border="1">
 
         <tr>
@@ -2070,7 +2071,12 @@ echo "$js_id";
 
     </table>
 
-    <input type="submit" name="submit" vlaue="Submit">
+    </div>
+
+    <div class="bottom">
+     
+
+    <input type="submit" class="submit_button" name="submit" value="Submit">
 
 </form>
 
@@ -2117,8 +2123,9 @@ echo "$js_id";
     if($count >=8){
 
     ?>
-
+    <button>
     <a href="quiz_success.php?id=<?php echo $job_id?>" type="submit">Continue</a>
+    </button>
 
     <?php
 
@@ -2128,24 +2135,26 @@ echo "$js_id";
 
     elseif($count >= 6){
     ?>
-
+    <button>
     <a href="quiz_fail_same_type.php?id=<?php echo $job_id?>" type="submit">Continue</a>
-
+    </button>
     <?php
     }   
 
 
     else{
     ?>
-
+    <button>
     <a href="quiz_fail_other_type.php?id=<?php echo $job_id?>" type="submit">Continue</a>
-
+    </button>
     <?php
     }   
 
 
 
     ?>
+
+</div>
 
 
 </body>
