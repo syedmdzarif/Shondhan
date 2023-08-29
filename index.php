@@ -27,7 +27,7 @@
             <ul>
                 <a class="w_login" href="job_list.php">Jobs</a>
                 <a class="e_login" href="course_list.php">Courses</a>
-                <a class="w_signup" href="login_admin.php">Admin</a>
+                <a class="w_signup" href="admin_login.php">Admin</a>
                 <a class="e_signup" href="signup.php">Signup</a>
             </ul>
         </div>
@@ -42,19 +42,19 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="images/chef.jpg" class="d-block w-100" alt="...">
+            <img src="images/slide_1.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="images/driver.jpg" class="d-block w-100" alt="...">
+            <img src="images/slide_1.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="images/gardener.jpg" class="d-block w-100" alt="...">
+            <img src="images/slide_1.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="images/delivery.jpg" class="d-block w-100" alt="...">
+            <img src="images/slide_1.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="images/slide5.jpg" class="d-block w-100" alt="...">
+            <img src="images/slide_1.png" class="d-block w-100" alt="...">
         </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
